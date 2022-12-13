@@ -7,9 +7,13 @@ jobs:
       - name: downloading repo
         uses: actions/checkout@v3
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd basic-testing-frontend
+          npm install
       - name: initating the testing
-        run: npm test
+        run: |
+          cd basic-testing-frontend
+          npm test
   BackEndTesting-job:
     runs-on: ubuntu-latest
     steps:
